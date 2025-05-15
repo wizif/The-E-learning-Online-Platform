@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CourseDetail from './pages/CourseDetail';
 import Contact from './pages/Contact';
+import Navbar from './components/Navbar';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -13,6 +14,8 @@ import Courses from './pages/Courses';
 const App = () => {
   return (
     <>
+          <Navbar />
+
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
