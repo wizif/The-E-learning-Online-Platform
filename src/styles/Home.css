@@ -1,0 +1,9 @@
+/* Home.css */
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 1rem;
+    justify-content: center;
+  }
+  

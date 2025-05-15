@@ -1,0 +1,32 @@
+.course-card {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .course-info {
+    padding: 15px;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #1e88e5;
+  }
+  
