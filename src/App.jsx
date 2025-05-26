@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
 import Footer from './components/Footer';
 import CourseDetail from './pages/CourseDetail';
 import Contact from './pages/Contact';
@@ -16,7 +15,6 @@ const App = () => {
     <>
           <Navbar />
 
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
