@@ -8,6 +8,7 @@ import About from './pages/About';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import './styles/App.css';
+import ScrollToTop from './router/ScrollToTop';
 
 const App = () => {
   return (

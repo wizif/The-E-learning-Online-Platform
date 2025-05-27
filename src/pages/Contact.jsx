@@ -1,28 +1,58 @@
-import React, { useRef, useEffect } from 'react';
-import gsap from 'gsap';
-import './Contact.css';
+import React, { useState } from "react";
+import "../styles/Contact.css";
 
 const Contact = () => {
-  const formRef = useRef();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
 
-  useEffect(() => {
-    gsap.from(formRef.current, {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-    });
-  }, []);
+  const handleChange = (e) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // Later: connect to email API or backend
+    alert("Thanks for contacting us!");
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   return (
-    <section className="contact-page">
+    <div className="contact-container">
       <h2>Contact Us</h2>
-      <form ref={formRef} className="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <input
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Your Name"
+          required
+        />
+        <input
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          type="email"
+          placeholder="Your Email"
+          required
+        />
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Your Message"
+          rows="5"
+          required
+        />
+        <button type="submit">Send</button>
       </form>
-    </section>
+    </div>
   );
 };
 

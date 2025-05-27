@@ -2,6 +2,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
+
+const [menuOpen, setMenuOpen] = useState(false);
+
+// Then conditionally render menu items
+<nav className={menuOpen ? "nav-open" : "nav-closed"}>
+  {/* ... */}
+</nav>
 const Navbar = () => {
   return (
     <nav className="navbar">
