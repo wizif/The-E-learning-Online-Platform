@@ -1,26 +1,25 @@
-const courses = [
-    {
-      id: 1,
-      title: "HTML & CSS Basics",
-      description: "Build beautiful websites with HTML & CSS.",
-      price: "₹499",
-      image: "/assets/htmlcss.jpg"
-    },
-    {
-      id: 2,
-      title: "JavaScript Mastery",
-      description: "Become a JavaScript ninja from scratch.",
-      price: "₹799",
-      image: "/assets/js.jpg"
-    },
-    {
-      id: 3,
-      title: "React Full Guide",
-      description: "Learn modern React and build amazing apps.",
-      price: "₹999",
-      image: "/assets/react.jpg"
-    }
-  ];
-  
-  export default courses;
-  
+const coursesData = [
+  {
+    id: 1,
+    title: "React for Beginners",
+    description: "Learn the basics of React.js with practical examples.",
+    image: "/images/react-course.jpg",
+    category: "Web Development"
+  },
+  {
+    id: 2,
+    title: "Python Fundamentals",
+    description: "Master Python programming from scratch.",
+    image: "/images/python-course.jpg",
+    category: "Python"
+  },
+  {
+    id: 3,
+    title: "AI with Python",
+    description: "Introduction to Artificial Intelligence using Python.",
+    image: "/images/ai-course.jpg",
+    category: "AI"
+  }
+];
+
+export default coursesData;

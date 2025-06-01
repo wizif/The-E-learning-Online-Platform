@@ -1,37 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+import coursesData from '../data/courses'; // create a separate JS file to store course data
 import CourseCard from '../components/CourseCard';
-
-const dummyCourses = [
-  {
-    id: 1,
-    title: "Web Development Bootcamp",
-    description: "Learn HTML, CSS, JS, React, and more!",
-    image: "/images/web-course.jpg",
-  },
-  {
-    id: 2,
-    title: "Python for Beginners",
-    description: "Master Python from scratch.",
-    image: "/images/python-course.jpg",
-  },
-  {
-    id: 3,
-    title: "Data Science Crash Course",
-    description: "Numpy, Pandas, ML, and more.",
-    image: "/images/data-science.jpg",
-  },
-];
+// import '..styles/'; // optional for styling
 
 const Courses = () => {
+  const [filter, setFilter] = useState('All');
+
+  const filteredCourses = filter === 'All'
+    ? coursesData
+    : coursesData.filter(course => course.category === filter);
+
   return (
-    <section className="p-6 bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-bold mb-6 text-center">Our Courses</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {dummyCourses.map((course) => (
+    <div className="courses-page">
+      <h2>All Courses</h2>
+
+      <div className="filter-buttons">
+        <button onClick={() => setFilter('All')}>All</button>
+        <button onClick={() => setFilter('Web Development')}>Web Dev</button>
+        <button onClick={() => setFilter('Python')}>Python</button>
+        <button onClick={() => setFilter('AI')}>AI</button>
+        {/* Add more if needed */}
+      </div>
+
+      <div className="courses-container">
+        {filteredCourses.map(course => (
           <CourseCard key={course.id} course={course} />
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

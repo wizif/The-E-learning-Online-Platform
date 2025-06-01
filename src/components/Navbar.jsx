@@ -1,25 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.css';
+import '../styles/Navbar.css';
 
-
-const [menuOpen, setMenuOpen] = useState(false);
-
-// Then conditionally render menu items
-<nav className={menuOpen ? "nav-open" : "nav-closed"}>
-  {/* ... */}
-</nav>
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+  };
+
   return (
     <nav className="navbar">
-      <h2 className="logo">Winwise Courses</h2>
-      <ul className="nav-links">
-        <li><NavLink to="/" end>Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-        <li><Link to="/courses" className="hover:text-blue-400">Courses</Link></li>
+      <div className="navbar-container">
+        <h2 className="logo">Winwise Courses</h2>
 
-      </ul>
+        {/* Hamburger menu button */}
+        <button className="hamburger" onClick={toggleMenu}>
+          ☰
+        </button>
+
+        {/* Navigation links */}
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <li><NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink></li>
+          <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink></li>
+          <li><NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink></li>
+          <li><NavLink to="/courses" onClick={() => setMenuOpen(false)}>Courses</NavLink></li>
+        </ul>
+      </div>
     </nav>
   );
 };

@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 import CourseCard from '../components/CourseCard';
-import img1 from '../assets/img1.jpg'; // Replace with your images
-import img2 from '../assets/img2.jpg';
-import img3 from '../assets/img3.jpg';
+// import img1 from '../assets/img1.jpg'; // Replace with your images
+// import img2 from '../assets/img2.jpg';
+// import img3 from '../assets/img3.jpg';
 import Testimonials from '../components/Testimonials';
 
-import './Home.css';
+import '../styles/home.css';
 import courses from '../data/courses';
 
 // const courses = [

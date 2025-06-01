@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import './Testimonials.css';
+import '../styles/Testimonials.css'; // ✅ correct path
 
 const Testimonials = () => {
   const sectionRef = useRef();

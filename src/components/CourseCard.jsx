@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
-import './CourseCard.css'; // you can create this file for styles
+import '../styles/CourseCard.css'; // you can create this file for styles
 
 const CourseCard = ({ course }) => {
     const [showModal, setShowModal] = useState(false);

@@ -1,0 +1,12 @@
+import React from 'react';
+
+const NotFound = () => {
+  return (
+    <div style={{ padding: '50px', textAlign: 'center' }}>
+      <h1>404</h1>
+      <p>Oops! Page not found.</p>
+    </div>
+  );
+};
+
+export default NotFound;

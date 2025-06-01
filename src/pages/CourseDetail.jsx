@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import '../../styles/CourseDetail.css';
+import '../styles/CourseDetail.css';
 import courses from '../data/courses';
 import gsap from 'gsap';
 
@@ -45,3 +45,26 @@ const CourseDetail = () => {
 };
 
 export default CourseDetail;
+// 
+// import React from 'react';
+// import { useParams } from 'react-router-dom';
+// import coursesData from '../data/courses';
+
+// const CourseDetail = () => {
+//   const { id } = useParams();
+//   const course = coursesData.find(c => c.id.toString() === id);
+
+//   if (!course) return <h2>Course not found</h2>;
+
+//   return (
+//     <div className="course-detail">
+//       <h2>{course.title}</h2>
+//       <img src={course.image} alt={course.title} />
+//       <p>{course.description}</p>
+//       {/* Add syllabus, instructor info, etc. if needed */}
+//     </div>
+//   );
+// };
+
+// export default CourseDetail;
+

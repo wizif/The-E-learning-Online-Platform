@@ -1,11 +1,18 @@
 import React from 'react';
+import '../styles/About.css'; // Create this file for styles
 
 const About = () => {
   return (
-    <main>
-      <h2>About Us</h2>
-      <p>We are an online platform dedicated to delivering high-quality coding courses.</p>
-    </main>
+    <div className="about-container">
+      <h1>About Winwise</h1>
+      <p>
+        Winwise is an online platform offering high-quality courses designed for students, professionals, and curious learners. 
+        We focus on providing real-world skills with easy-to-follow resources.
+      </p>
+      <p>
+        Our mission is to empower people with modern tech knowledge that helps them build their future with confidence.
+      </p>
+    </div>
   );
 };
 
