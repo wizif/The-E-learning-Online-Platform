@@ -1,26 +1,44 @@
 import React from 'react';
-import { useState } from 'react';
-
 import { Link } from 'react-router-dom';
-import '../styles/CourseCard.css'; // you can create this file for styles
+import { FaStar, FaClock } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 const CourseCard = ({ course }) => {
-    const [showModal, setShowModal] = useState(false);
+  // Guard clause if course is undefined
+  if (!course) {
+    return <div className="course-card error">Course data missing</div>;
+  }
 
   return (
-    
-    <Link to={`/course/${course.id}`} className="course-card">
-        <button onClick={() => setShowModal(true)} className="enroll-btn">
-  Enroll Now
-</button>
-      <img src={course.image} alt={course.title} className="course-img" />
-      <div className="course-info">
-        <h3>{course.title}</h3>
-        <p>{course.description}</p>
-        <p className="price">{course.price}</p>
+    <div className="course-card">
+      <div className="course-image">
+        <img 
+          src={course.image || '/images/course-placeholder.jpg'} 
+          alt={course.title || 'Course image'}
+        />
+        <span className="category-badge">
+          {course.category || 'Uncategorized'}
+        </span>
       </div>
-    </Link>
+      
+      {/* Rest of your component */}
+    </div>
   );
+};
+
+CourseCard.propTypes = {
+  course: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    image: PropTypes.string,
+    category: PropTypes.string,
+    duration: PropTypes.string,
+    level: PropTypes.string,
+    rating: PropTypes.number,
+    students: PropTypes.number,
+    price: PropTypes.number
+  })
 };
 
 export default CourseCard;
