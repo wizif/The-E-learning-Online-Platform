@@ -1,8 +1,14 @@
 import React from 'react';
-import { FaChalkboardTeacher, FaGraduationCap, FaAward, FaUsers } from 'react-icons/fa';
-import teamMembers from '../data/team.js'; // Create this data file
+import { 
+  FaChalkboardTeacher, 
+  FaGraduationCap, 
+  FaAward, 
+  FaUsers 
+} from 'react-icons/fa';
+import { FaLinkedinIn as FaLinkedIn, FaTwitter } from 'react-icons/fa';
+import teamMembers from '../data/team.js';
 import '../styles/About.css';
-import { FaLinkedIn, FaTwitter } from 'react-icons/fa6'; 
+
 const About = () => {
   const stats = [
     { value: '10,000+', label: 'Students Enrolled', icon: <FaUsers /> },
