@@ -5,6 +5,12 @@ import CourseCard from '../components/CourseCard';
 import coursesData from '../data/courses';
 import '../styles/Courses.css';
 
+
+import course1Img from '../images/course1.jpg';
+import course2Img from '../images/course2.jpg';
+import course3Img from '../images/course3.jpg';
+
+
 const Courses = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('All');

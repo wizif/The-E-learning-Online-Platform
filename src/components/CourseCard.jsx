@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaStar, FaClock } from 'react-icons/fa';
 import PropTypes from 'prop-types';
+import '../styles/CourseCard.css';
 
 const CourseCard = ({ course }) => {
-  // Guard clause if course is undefined
   if (!course) {
     return <div className="course-card error">Course data missing</div>;
   }
@@ -12,16 +12,40 @@ const CourseCard = ({ course }) => {
   return (
     <div className="course-card">
       <div className="course-image">
-        <img 
-          src={course.image || '/images/course-placeholder.jpg'} 
+        <img
+          src={course.image || '/images/course-placeholder.jpg'}
           alt={course.title || 'Course image'}
         />
         <span className="category-badge">
           {course.category || 'Uncategorized'}
         </span>
       </div>
-      
-      {/* Rest of your component */}
+
+      <div className="course-details">
+        <h3>{course.title}</h3>
+        <p>{course.description}</p>
+
+        <div className="course-meta">
+          <span className="course-duration">
+            <FaClock /> {course.duration}
+          </span>
+          <span className="course-level">{course.level}</span>
+        </div>
+
+        <div className="course-stats">
+          <span className="course-rating">
+            <FaStar /> {course.rating.toFixed(1)}
+          </span>
+          <span className="course-students">{course.students}+ Students</span>
+        </div>
+
+        <div className="course-footer">
+          <span className="course-price">₹{course.price}</span>
+          <Link to={`/courses/${course.id}`} className="btn btn-primary">
+            View Details
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

@@ -4,11 +4,16 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import "../styles/Carousel.css";
+
+import course1Img from '../images/course1.jpg';
+import course2Img from '../images/course2.jpg';
+import course3Img from '../images/course3.jpg';
+
 const CourseCarousel = () => {
   const carouselImages = [
-    '..assets/Images/course1.jpg',
-    '..assets/Images/course2.jpg',
-    '..assets/Images/course3.jpg',
+    course1Img,
+    course2Img,
+    course3Img
   ];
 
   return (
