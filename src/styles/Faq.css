@@ -1,0 +1,114 @@
+.faq {
+    background: var(--color-bg2);
+    padding: 6rem 0;
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.3);
+  }
+  
+  .faq h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+  }
+  
+  .faq__subtitle {
+    text-align: center;
+    color: var(--color-light);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+  }
+  
+  .faq__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq__item {
+    background: var(--color-bg1);
+    margin-bottom: 1.5rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+  }
+  
+  .faq__item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .faq__item.active {
+    border-left-color: var(--color-primary);
+  }
+  
+  .faq__question {
+    padding: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faq__question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    font-weight: 500;
+    flex: 1;
+  }
+  
+  .faq__icon {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-left: 1rem;
+    transition: var(--transition);
+  }
+  
+  .faq__item.active .faq__icon {
+    transform: rotate(180deg);
+  }
+  
+  .faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+  
+  .faq__item.active .faq__answer {
+    max-height: 300px;
+    padding: 0 1.8rem 1.8rem;
+  }
+  
+  .faq__answer p {
+    line-height: 1.8;
+    color: var(--color-light);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .faq {
+      padding: 4rem 0;
+    }
+  
+    .faq__question {
+      padding: 1.5rem;
+    }
+  
+    .faq__item.active .faq__answer {
+      padding: 0 1.5rem 1.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .faq__question h3 {
+      font-size: 1rem;
+    }
+  
+    .faq__question {
+      padding: 1.2rem;
+    }
+  
+    .faq__item.active .faq__answer {
+      padding: 0 1.2rem 1.2rem;
+    }
+  }

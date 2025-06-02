@@ -1,0 +1,46 @@
+.header {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header__container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-shape {
+    position: absolute;
+    background: var(--color-primary);
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: 1;
+  }
+  
+  .hero-shape-1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+  }
+  
+  .hero-shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    right: 10%;
+  }
+  
+  .hero-shape-3 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    right: 20%;
+  }
+  
+  /* Add more shapes as needed */
+  
+  .header__right-image img {
+    will-change: transform; /* Optimize for animation */
+  }
+  
+  /* Existing header styles... */
