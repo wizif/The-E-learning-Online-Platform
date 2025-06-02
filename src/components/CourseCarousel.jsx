@@ -3,13 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import "../styles/Carousel.css";
 const CourseCarousel = () => {
   const carouselImages = [
     '..assets/Images/course1.jpg',
     '..assets/Images/course2.jpg',
     '..assets/Images/course3.jpg',
-    '..assets/Images/course4.jpg',
   ];
 
   return (

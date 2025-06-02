@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
-import "..styles/hero.css"
+import '../styles/Hero.css';
 const Hero = () => {
   const heroRef = useRef(null);
   const headerLeftRef = useRef(null);
@@ -76,7 +76,7 @@ const Hero = () => {
         </div>
         <div className="header__right" ref={headerRightRef}>
           <div className="header__right-image">
-            <img src="./images/the logo of main.avif" alt="EduZone Learning" />
+            <img src="..images/course2.jpg" alt="EduZone Learning" />
           </div>
         </div>
       </div>

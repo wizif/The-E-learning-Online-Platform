@@ -4,8 +4,21 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f4f4f4;
   }
+  :root {
+    --color-bg: #0f172a;
+    --color-bg1: #1e293b;
+    --color-bg2: #334155;
+    --color-primary: #3b82f6;
+    --color-white: #ffffff;
+    --container-width-lg: 90%;
+    --container-width-md: 80%;
+    --container-width-sm: 95%;
+    --transition: all 0.3s ease;
+  }
   
   * {
     box-sizing: border-box;
   }
-  
+  element.style{
+    opacity: 8;
+  }
