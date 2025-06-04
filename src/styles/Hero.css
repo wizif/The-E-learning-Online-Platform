@@ -3,7 +3,12 @@
     position: relative;
     overflow: hidden;
     padding: 5rem 0;
-    background: linear-gradient(135deg, #075ee2 0%, #263d4f 100%);
+    background: 
+    linear-gradient(to bottom, 
+        rgb(0, 0, 0),  /* More transparent white */
+        rgba(255, 255, 255, 0.272)         /* Darker black */
+    ),
+    url('../images/cta-bg.jpg') center/cover;
   }
   
   .header__container {

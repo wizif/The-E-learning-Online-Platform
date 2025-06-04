@@ -2,6 +2,9 @@ import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import '../styles/Hero.css';
+
+import thecourse from "../images/mainlogo.avif"; 
+
 const Hero = () => {
   const heroRef = useRef(null);
   const headerLeftRef = useRef(null);
@@ -76,7 +79,7 @@ const Hero = () => {
         </div>
         <div className="header__right" ref={headerRightRef}>
           <div className="header__right-image">
-            <img src="..images/course2.jpg" alt="EduZone Learning" />
+            <img src="{thecourse}" alt="EduZone Learning" />
           </div>
         </div>
       </div>

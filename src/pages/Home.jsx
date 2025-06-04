@@ -10,6 +10,7 @@ import CourseCarousel from '../components/CourseCarousel';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 
+// import thecourse from "../images/course1.jpg"; 
 import '../styles/Home.css';
 import courses from '../data/courses';
 
